@@ -1,0 +1,42 @@
+{
+    "AVAX": {
+        "address": "0x3CFEd0439aB822530b1fFBd19536d897EF30D2a2",
+        "chain": "AVALANCHE NETWORK",
+        "logo": "https://assets.coingecko.com/coins/images/12559/large/coin-round-red.png?1604021818",
+        "previous_amount": "653394.471172403823528739",
+        "title": "AVAX",
+        "website": "https://avax.network/"
+    },
+    "wFTM 1.8%": {
+        "address": "0xd4357d43545F793101b592bACaB89943DC89d11b",
+        "chain": "FANTOM OPERA",
+        "logo": "https://cdn.discordapp.com/attachments/888144726988062784/888170595123089468/FTM.png",
+        "previous_amount": "9491917.860155273733392438",
+        "title": "Fantom",
+        "website": "https://fantom.foundation"
+    },
+    "wFTM 3.5%": {
+        "address": "0x8E45Af6743422e488aFAcDad842cE75A09eaEd34",
+        "chain": "FANTOM OPERA",
+        "logo": "https://cdn.discordapp.com/attachments/888144726988062784/888170595123089468/FTM.png",
+        "previous_amount": "8792149.305141660020862732",
+        "title": "Fantom",
+        "website": "https://fantom.foundation"
+    },
+    "wMEMO": {
+        "address": "0x35fA7A723B3B39f15623Ff1Eb26D8701E7D6bB21",
+        "chain": "AVALANCHE NETWORK",
+        "logo": "https://cdn.discordapp.com/attachments/828696357719769088/893520895593816124/MEMO_Token.png",
+        "previous_amount": "0.305702865230421997",
+        "title": "wMEMO",
+        "website": "https://wonderland.money/"
+    },
+    "yvWFTM": {
+        "address": "0xed745b045f9495b8bfc7b58eea8e0d0597884e12",
+        "chain": "FANTOM OPERA",
+        "logo": "https://cdn.discordapp.com/attachments/888144726988062784/888170595123089468/FTM.png",
+        "previous_amount": "16148768.23707033238407943",
+        "title": "Yearn wFTM Vault",
+        "website": "https://ape.tax/the-fantom"
+    }
+}
