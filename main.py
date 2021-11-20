@@ -14,7 +14,7 @@ def checkTreshold(previous_amount, amount, treshold):
     if amount - previous_amount > treshold: #check if the increase is > treshold
         if previous_amount == 0: #if previousAmount is "pure" 0, we send message
             return True
-        elif amount - previous_amount > Decimal(0.3) * previous_amount: #check wether the increase is at least a 30% increase
+        elif amount - previous_amount > Decimal(0.15) * previous_amount: #check wether the increase is at least a 30% increase
             return True
         else:
             return False
