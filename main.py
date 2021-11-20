@@ -52,9 +52,10 @@ while True:
                         print("error sending discord message")
                     #twitter.tweet(tokens, amount, settings, chain)
 
-                    
-
                 cauldrons[tokens]['previous_amount'] = str(amount) #Store amount as Previous_amount
-            
     
+    # Update previous amount
     json.dump(cauldrons, open("Cauldrons.json", 'w'), indent=4, sort_keys=True)
+
+    # Sleep before next run
+    time.sleep(10)
