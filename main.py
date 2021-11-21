@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 check_delay_sec = int(os.getenv('CHECK_DELAY_SEC'))
+print('Check delay set to {} seconds'.format(check_delay_sec))
 
 cauldrons = json.loads(open("Cauldrons.json", 'r').read()) #Loads Cauldrons.json as a nested dic
 settings = json.loads(open("Settings.json", 'r').read()) #Loads Chains Info
