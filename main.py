@@ -1,11 +1,11 @@
-import decimal
-import json
-import time
+import decimal, json, time, os, discordWH
 from decimal import Decimal
 from web3 import Web3
-import discordWH
+from dotenv import load_dotenv
 # import twitter
 
+load_dotenv()
+check_delay_sec = int(os.getenv('CHECK_DELAY_SEC'))
 
 cauldrons = json.loads(open("Cauldrons.json", 'r').read()) #Loads Cauldrons.json as a nested dic
 settings = json.loads(open("Settings.json", 'r').read()) #Loads Chains Info
@@ -20,8 +20,8 @@ def checkTreshold(previous_amount, amount, treshold):
             return False
 
 def  getMIMAmount(mim_address, cauldron):
-    mim_amount=bentobox.functions.balanceOf(mim_address, cauldron).call()
-    mim_amount=w3.fromWei(mim_amount, 'ether')
+    mim_amount = bentobox.functions.balanceOf(mim_address, cauldron).call()
+    mim_amount = w3.fromWei(mim_amount, 'ether')
     return Decimal(mim_amount)
 
 while True:
@@ -30,7 +30,7 @@ while True:
         bb_address = w3.toChecksumAddress(settings[chain]['bentobox']) #BentoBox Contract Address
         MIM_contract_address=w3.toChecksumAddress(settings[chain]['MIM']) #MIM Contract Address
         bb_ABI = json.load(open('BentoBoxV1.json', 'r')) #BentoBox ABI load, from BentoBoxV1.json
-        bentobox = w3.eth.contract(address=bb_address, abi=bb_ABI) 
+        bentobox = w3.eth.contract(address=bb_address, abi=bb_ABI)
 
         for tokens in cauldrons.keys(): #Go through each Cauldron entry
             if cauldrons[tokens]['chain'] == chain: #Check wether the Cauldron entry is on the chain we are working with 
@@ -58,4 +58,4 @@ while True:
     json.dump(cauldrons, open("Cauldrons.json", 'w'), indent=4, sort_keys=True)
 
     # Sleep before next run
-    time.sleep(10)
+    time.sleep(check_delay_sec)

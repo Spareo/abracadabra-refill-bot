@@ -18,4 +18,3 @@ def sendMessage(tokens, amount, cauldrons, settings, chain):
     webhook.add_embed(embed)
     response = webhook.execute(remove_embeds=True)
     print("discord sent!")
-    sleep(5)
